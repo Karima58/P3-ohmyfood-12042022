@@ -120,6 +120,9 @@ li i.fas {
 .menus {
   background-color: #f6f6f6;
 }
+.menus h2 {
+  margin-bottom: 2rem;
+}
 .menus .menus__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -147,9 +150,5 @@ li i.fas {
 .menus .card__image-4 {
   background-image: url("../../assets/menu-4.jpg");
 }
-
-/*height:4rem;
-        flex-grow:1;
-        min-width:20rem; */
 
 /*# sourceMappingURL=style.css.map */
