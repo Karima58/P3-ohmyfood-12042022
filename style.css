@@ -17,6 +17,7 @@ main {
 @media (max-width: 1000px) {
   main {
     padding: 0 1rem;
+    margin: 2rem 2rem;
   }
 }
 
@@ -73,10 +74,10 @@ header {
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   transition-duration: 0.25s;
   margin-top: 1rem;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
 }
 .explorer button:hover {
   transform: scale(1.02);
@@ -195,6 +196,19 @@ li i.fas {
   right: 1rem;
   top: 30%;
   transform: translateY(-30%);
+  color: #7c7c7c;
+}
+.menus .card .card__description .fas {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
+}
+.menus .card .card__description:hover .fas {
+  opacity: 1;
+  transform: scale(1.2) translateY(-30%);
 }
 
 footer {

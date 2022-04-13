@@ -1,5 +1,6 @@
 @use "../utils/variables.scss";
 @use "../utils/colors.scss";
+@use "../utils/linear-gradient.scss";
 
 .menus{
     background-color: #f6f6f6;
@@ -59,16 +60,25 @@
                 right: 1rem;
                 top: 30%;
                 transform:translateY(-30%);
-                //mix-blend-mode:lighten;
-
-               
+                color:colors.$lightygrey;
             }
+            .fas{
+                color:transparent;
+                //background-image:linear-gradient(red, blue); //gradient: toujours en background-image
+                background-clip:text;
+                -webkit-background-clip:text;
+                opacity:0;
+                transition:all 200ms ease-in-out;
+                @include linear-gradient.gradient(1);// argument: il est passé à opacity:1
+               
+                
+            }
+            &:hover .fas{
+                opacity:1;
+                transform: scale(1.2) translateY(-30%);
+            }
+
         }
-
-        
-
-
-
     }
 
 }

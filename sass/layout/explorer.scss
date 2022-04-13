@@ -1,4 +1,5 @@
-@use"../utils/box-shadow.scss";
+@use "../utils/box-shadow.scss";
+@use "../utils/linear-gradient.scss";
 
 .explorer{
     background-color: #fafafa;
@@ -18,10 +19,10 @@
     padding:1rem 2rem;
     border:none;
     border-radius:2rem;
-    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
     transition-duration: .25s;
     margin-top:1rem;
     @include  box-shadow.base-shadow;
+    @include linear-gradient.gradient(.9);// argument: il est resté à opacity 0.9
     }
     & button:hover{
     transform: scale(1.02);
