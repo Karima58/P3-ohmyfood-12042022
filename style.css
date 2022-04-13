@@ -14,10 +14,24 @@ body {
 main {
   padding: 0 7rem;
 }
+@media (max-width: 1000px) {
+  main {
+    padding: 0 1rem;
+  }
+}
 
 h2 {
   padding: 2rem 0;
   margin: 0;
+}
+
+h3, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 header {
@@ -44,7 +58,7 @@ header {
 .explorer {
   background-color: #fafafa;
   text-align: center;
-  height: 18rem;
+  height: 22rem;
   padding-top: 3rem;
 }
 .explorer h2 {
@@ -119,6 +133,7 @@ li i.fas {
 
 .menus {
   background-color: #f6f6f6;
+  margin-bottom: 2rem;
 }
 .menus h2 {
   margin-bottom: 2rem;
@@ -132,6 +147,22 @@ li i.fas {
   .menus .menus__cards {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+.menus .menus__cards .new {
+  position: relative;
+}
+.menus .menus__cards .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99E2D0;
+  display: grid;
+  place-items: center;
+  color: #1b6150;
+  border-radius: 0.25rem;
+  right: 1rem;
+  top: 1rem;
 }
 .menus .card__image {
   height: 15rem;
@@ -149,6 +180,35 @@ li i.fas {
 }
 .menus .card__image-4 {
   background-image: url("../../assets/menu-4.jpg");
+}
+.menus .card .card__description {
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+.menus .card .card__description h3, .menus .card .card__description p {
+  padding: 0.3rem;
+}
+.menus .card .card__description i {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 30%;
+  transform: translateY(-30%);
+}
+
+footer {
+  background-color: #353535;
+  padding: 0 2rem;
+  color: white;
+  padding: 1rem 2rem;
+}
+footer h2 {
+  font-family: "Shrikhand", "cursive";
+  padding: 1rem 0;
+}
+footer p {
+  padding: 0.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

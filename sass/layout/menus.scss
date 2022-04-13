@@ -1,7 +1,9 @@
 @use "../utils/variables.scss";
+@use "../utils/colors.scss";
 
 .menus{
     background-color: #f6f6f6;
+    margin-bottom:2rem;
     h2{
         margin-bottom:2rem;
     }
@@ -13,6 +15,23 @@
         @media (max-width:variables.$breakpoint){
             grid-template-columns: repeat(1, 1fr);
         }
+        .new{
+            position:relative;
+        }
+        .new::before{
+            content:"Nouveau";
+            position:absolute;
+            height:2rem;
+            width: 5rem;
+            background-color:colors.$tertiary;
+            display:grid;
+            place-items: center;
+            color:#1b6150;
+            border-radius: .25rem;
+            right:1rem;
+            top:1rem;
+        }
+
     }
     .card{
         &__image{
@@ -24,8 +43,34 @@
             &__image-#{$i} {
                 background-image: url("../../assets/menu-#{$i}.jpg");
             }
-        }   
+        }
+
+        .card__description{
+            position:relative;
+            background-color:white;
+            border-radius: 0 0 1rem 1rem;
+           
+            h3, p{
+                padding:.3rem;
+            }
+            i{
+                font-size: 1.5rem;
+                position:absolute;
+                right: 1rem;
+                top: 30%;
+                transform:translateY(-30%);
+                //mix-blend-mode:lighten;
+
+               
+            }
+        }
+
+        
+
+
+
     }
+
 }
 
 
