@@ -201,7 +201,7 @@ li i.fas {
   right: 1rem;
   top: 30%;
   transform: translateY(-30%);
-  color: inherit;
+  color: #7c7c7c;
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
@@ -214,22 +214,19 @@ li i.fas {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 5 Free";
-  font-weight: 400;
+  font-weight: 900;
   content: "\f004";
   font-size: 1.5rem;
   position: absolute;
   right: 1rem;
   top: 30%;
   transform: translateY(-30%);
-  color: inherit;
+  color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  opacity: 1;
+  opacity: 0;
   transition: all 200ms ease-in-out;
   background-image: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
-  opacity: 0;
-  color: transparent;
-  font-weight: 900;
 }
 .menus .card .card__description:hover::after {
   opacity: 1;

@@ -53,15 +53,12 @@
 
             //Pseudo Elements 
             &::before{
-                @include mixins.heart;
-                                              
+                @include mixins.heart;                                
             }
             &::after{
-                @include mixins.heart;
+                @include mixins.heart($opacity:0, $font-weight:900, $color:transparent);
                 @include mixins.gradient(1);// argument: il est passé à opacity:1
-                opacity:0;
-                color:transparent;
-                font-weight:900;
+
             }
             &:hover::after{
                 opacity:1;
