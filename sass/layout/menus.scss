@@ -1,6 +1,6 @@
 @use "../utils/variables.scss";
 @use "../utils/colors.scss";
-@use "../utils/mixins";
+@use "../utils/mixins.scss";
 
 .menus{
     background-color: #f6f6f6;
@@ -51,39 +51,26 @@
             background-color:white;
             border-radius: 0 0 1rem 1rem;
 
-            //Pseudo Element 
-            /*&::before{
-                display: inline-block;
-                font-style: normal;
-                font-variant: normal;
-                text-rendering: auto;
-                -webkit-font-smoothing: antialiased;
-                font-family: "Font Awesome 5 Free"; 
-                font-weight: 400; 
-                content: "\f004"; 
-            }*/
-           
+            //Pseudo Elements 
+            &::before{
+                @include mixins.heart;
+                                              
+            }
+            &::after{
+                @include mixins.heart;
+                @include mixins.gradient(1);// argument: il est passé à opacity:1
+                opacity:0;
+                color:transparent;
+                font-weight:900;
+            }
+            &:hover::after{
+                opacity:1;
+                transform: translateY(-30%) scale(1.2);
+
+            }
+
             h3, p{
                 padding:.3rem;
-            }
-            i{
-                font-size: 1.5rem;
-                position:absolute;
-                right: 1rem;
-                top: 30%;
-                transform:translateY(-30%);
-                color:colors.$lightygrey;
-            }
-            .fas{
-                color:transparent;
-                //background-image:linear-gradient(red, blue); //gradient: toujours en background-image
-                background-clip:text;
-                -webkit-background-clip:text;
-                opacity:0;
-                transition:all 200ms ease-in-out;
-                @include mixins.gradient(1);// argument: il est passé à opacity:1
-               
-                
             }
             &:hover .fas{
                 opacity:1;
