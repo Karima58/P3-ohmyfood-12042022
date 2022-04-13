@@ -62,7 +62,7 @@ header {
   height: 22rem;
   padding-top: 3rem;
 }
-.explorer h2 {
+width .explorer h2 {
   margin-top: 2rem;
 }
 .explorer p {
@@ -186,6 +186,16 @@ li i.fas {
   position: relative;
   background-color: white;
   border-radius: 0 0 1rem 1rem;
+  /*&::before{
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font-family: "Font Awesome 5 Free"; 
+      font-weight: 400; 
+      content: "\f004"; 
+  }*/
 }
 .menus .card .card__description h3, .menus .card .card__description p {
   padding: 0.3rem;

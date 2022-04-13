@@ -1,11 +1,11 @@
-@use "../utils/box-shadow.scss";
-@use "../utils/linear-gradient.scss";
+@use "../utils/mixins";
 
 .explorer{
     background-color: #fafafa;
     text-align: center;
     height:22rem;
     padding-top:3rem;
+    width
 
     & h2{
     margin-top:2rem;  
@@ -21,8 +21,8 @@
     border-radius:2rem;
     transition-duration: .25s;
     margin-top:1rem;
-    @include  box-shadow.base-shadow;
-    @include linear-gradient.gradient(.9);// argument: il est resté à opacity 0.9
+    @include mixins.base-shadow;
+    @include mixins.gradient(.9);// argument: il est resté à opacity 0.9
     }
     & button:hover{
     transform: scale(1.02);
