@@ -58,20 +58,18 @@
             &::after{
                 @include mixins.heart($opacity:0, $font-weight:900, $color:transparent);
                 @include mixins.gradient(1);// argument: il est passé à opacity:1
-
             }
             &:hover::after{
                 opacity:1;
                 transform: translateY(-30%) scale(1.2);
-
-            }
-
-            h3, p{
-                padding:.3rem;
             }
             &:hover .fas{
                 opacity:1;
                 transform: scale(1.2) translateY(-30%);
+            }
+
+            h3, p{
+                padding:.3rem;
             }
 
         }
