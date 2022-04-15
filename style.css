@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
-*,
-::before,
+* ::before,
 ::after {
   box-sizing: border-box;
 }
@@ -59,10 +58,10 @@ header {
 .explorer {
   background-color: #fafafa;
   text-align: center;
-  height: 22rem;
+  height: 18rem;
   padding-top: 3rem;
 }
-width .explorer h2 {
+.explorer h2 {
   margin-top: 2rem;
 }
 .explorer p {
@@ -87,6 +86,7 @@ width .explorer h2 {
 .tuto {
   counter-reset: steps;
   margin-bottom: 2rem;
+  padding: 1rem;
 }
 
 ol {
@@ -134,7 +134,6 @@ li i.fas {
 
 .menus {
   background-color: #f6f6f6;
-  margin-bottom: 2rem;
 }
 .menus h2 {
   margin-bottom: 2rem;
@@ -262,19 +261,18 @@ footer p {
   object-position: top;
 }
 
-.resto__main {
-  padding: 0 1rem;
+.resto__title {
   margin-top: -4rem;
-}
-.resto__main h2 {
   background: white;
-  margin: -1rem;
-  padding: 2rem;
+}
+.resto__title h2 {
+  background: white;
+  padding: 1rem;
   border-radius: 3em 4rem 0 0;
   position: relative;
   font-family: "Shrikhand", "cursive";
 }
-.resto__main h2::before {
+.resto__title h2::before {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -294,7 +292,7 @@ footer p {
   opacity: 1;
   transition: all 200ms ease-in-out;
 }
-.resto__main h2::after {
+.resto__title h2::after {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
@@ -315,13 +313,32 @@ footer p {
   transition: all 200ms ease-in-out;
   background-image: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
 }
-.resto__main h2:hover::after {
+.resto__title h2:hover::after {
   opacity: 1;
   transform: translateY(-30%) scale(1.2);
 }
-.resto__main h2:hover .fas {
+.resto__title h2:hover .fas {
   opacity: 1;
   transform: scale(1.2) translateY(-30%);
+}
+
+.menus-choice {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  background: yellow;
+}
+@media (max-width: 1000px) {
+  .menus-choice {
+    grid-template-columns: 1fr;
+  }
+}
+.menus-choice .menu__category {
+  border: 1px solid red;
+}
+
+.resto-main {
+  padding: 0 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
