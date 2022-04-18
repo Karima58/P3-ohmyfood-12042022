@@ -20,7 +20,7 @@
     border-radius:2rem;
     transition-duration: .25s;
     margin-top:1rem;
-    @include mixins.base-shadow;
+    @include mixins.box-shadow;
     @include mixins.gradient(.9);// argument: il est resté à opacity 0.9
     }
     & button:hover{
