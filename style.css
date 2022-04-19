@@ -263,6 +263,21 @@ body {
   background-color: #F6F6F6;
 }
 
+#page-restaurant header::before {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smothing: antialiased;
+  font-family: "font Awesome 5 free";
+  font-weight: 900;
+  content: "\f060";
+  left: 1rem;
+}
 #page-restaurant .banner img {
   display: block;
   width: 100%;
