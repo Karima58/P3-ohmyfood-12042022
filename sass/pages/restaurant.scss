@@ -60,6 +60,22 @@ body{
     background-color:colors.$lightergrey;
    
 }
+h3{
+    text-transform: uppercase;
+    font-weight:400;
+    position:relative;
+    &::after{
+        content:"";
+        position:absolute;
+        top:1.8rem;
+        left:0;
+        height:0.25rem;
+        width:3rem;
+        background-color:colors.$tertiary
+
+
+    }
+}
 
     .menus-choice{
         display:grid;
@@ -73,6 +89,8 @@ body{
             border-radius: 1rem;
             filter:drop-shadow(4px 4px 4px colors.$lightygrey);
             overflow:hidden;
+            margin:0.5rem;
+            
            
             h4, p{
                 padding:0;
@@ -85,7 +103,6 @@ body{
             .entries-items{
                 display:flex;
                 overflow: hidden;
-               
                 
             .entries-items__price{
                 margin-left:auto;
@@ -118,11 +135,11 @@ body{
                         width:2rem;
                         border-radius:1rem;
                         color:colors.$tertiary;
-
                     }
                 }
                 &:hover {
-                .entries-items__check{
+                    cursor:pointer;
+                    .entries-items__check{
                     margin-right: 0;
                 }
                 i{
@@ -134,7 +151,22 @@ body{
             }
         }
     }
-}
+
+    section.order{
+        height:20vh;
+        display:grid;
+        place-items: center;
+        button{
+            @include mixins.base-button;
+        }
+         button:hover{
+            transform: scale(1.02);
+            opacity: 0.9;
+            }
+    }
+    }
+
+
     
 
 
