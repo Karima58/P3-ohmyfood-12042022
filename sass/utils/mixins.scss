@@ -1,9 +1,17 @@
 @use "../utils/colors.scss";
 
+
+
+
+@mixin mobile-only{ 
+    @media screen and (max-width:map-get($breakpoints, mobile)){
+        grid-template-colums:1fr;
+}
+
 @mixin gradient($opacity){
     background-image: linear-gradient(0deg,
     rgba(147,86,
-    220,$opacity),
+    220,.9),
     rgba(255,121,218,$opacity)); 
 }
 
@@ -46,4 +54,5 @@
     margin-top:1rem;
     @include box-shadow;
     @include gradient(.9);
+}
 }

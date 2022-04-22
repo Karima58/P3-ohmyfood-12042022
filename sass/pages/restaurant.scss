@@ -91,7 +91,17 @@ body{
     background-color:colors.$lightergrey;  
 }
 
- h3{
+
+.menus__choice{
+    display:grid;
+    grid-template-columns: repeat(3,  1fr);
+    gap: 1rem;
+    @media (min-width:variables.$breakpoint){
+        grid-template-columns: repeat(1, 3fr);
+    }
+
+ #title-menu 
+  h3{
     text-transform: uppercase;
     font-weight:400;
     position:relative;
@@ -108,54 +118,51 @@ body{
     }
 }
 
-    .menus__choice{
-        display:grid;
-        grid-template-columns: repeat(3,  1fr);
-        gap: 1rem;
+   
 
-        @media (max-width:variables.$breakpoint){
-            grid-template-columns: repeat(1, 3fr);
-        }
             .menu__category{
             background-color: white;
             border-radius: 1rem;
             filter:drop-shadow(4px 4px 4px colors.$lightygrey);
             overflow:hidden;
             margin:1.5rem;
-            @for $i from 1 through 3{
-                &:nth-chidl(#{$i}){
-                    animation-delay:300ms * $i;
-            }
-    
             animation: appear 3s;
-
-            .entries-items{
+             .menu-items{
+                @for $i from 1 through 3{
+                    &:nth-chidl(#{$i}){
+                     animation-delay:100ms * $i;
+                }
+            }
                 display:flex;
                 overflow: hidden;
+                animation-fill-mode: both;
                 animation:appear 1s;
-                animation-fill-mode: both;  
             }
             
-            .entries-items__description{
+            
+        
+            .menu-items__description{
                 padding:1rem;
                 overflow: hidden; 
-            }  
-            h4, p{
-                padding:0;
-                margin:0;
-                overflow: hidden;
-                white-space:nowrap;
-                text-overflow: ellipsis;
+             
+                h4, p{
+                    padding:0;
+                    margin:0;
+                    overflow: hidden;
+                    white-space:nowrap;
+                    text-overflow: ellipsis;
+                }
             }
+        
 
-            .entries-items__price{
+            .menu-items__price{
                 margin-left:auto;
                 font-weight:bold;
                 padding:1rem;
                 display:flex; 
                 align-items: flex-end;    
             }
-                .entries-items__check{
+                .menu-items__check{
                     display:grid;
                     place-items: center;
                     flex-shrink:0;
@@ -177,7 +184,7 @@ body{
                 }
                 &:hover {
                     cursor:pointer;
-                    .entries-items__check{
+                    .menu-items__check{
                     margin-right: 0;
                 }
                 i{
@@ -187,12 +194,12 @@ body{
                 }
                 }
             }
-        }
+        }     
     }
    
 
     section.order{
-        height:40vh;
+        padding-bottom: 4rem;
         display:grid;
         place-items: center;
         button{
@@ -203,7 +210,8 @@ body{
             opacity: 0.9;
             }
     }
-    }
+    
+
 
 
     

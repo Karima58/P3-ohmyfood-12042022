@@ -10,12 +10,12 @@
 body{
     margin:0;
     font-family: "Roboto", sans-serif;
-    
+   
 }
 
 main{
     padding: 0 7rem;
-    @media(max-width:1200px){
+    @media screen and (min-width:1200px){
        padding:0 1rem; 
        margin: 2rem 2rem;
     }
