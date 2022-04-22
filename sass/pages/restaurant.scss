@@ -3,6 +3,7 @@
 @use "../utils/colors.scss";
 @use "../utils/animations.scss";
 
+
 @keyframes quarterspin{
     0%{
         transform:rotate(0deg);
@@ -24,24 +25,29 @@ body{
 }
 
 #page-restaurant{
-    header::before{
-        transition: transform 3s;
-        position:absolute;
-        display:flex;
-        top:50%;
-        transform:translateY(-50%);
-        font-size:25px;
-        font-style:normal;
-        font-variant:normal;
-        text-rendering:auto;
-        -webkit-font-smothing: antialiased;
-        font-family:"font Awesome 5 free";
-        font-weight:900;
-        content:"\f060";
-        left:1rem;
 
-
+    header{
+        &::before{
+            transition: transform 3s;
+            position:absolute;
+            display:flex;
+            top:50%;
+            transform:translateY(-50%);
+            font-size:25px;
+            font-style:normal;
+            font-variant:normal;
+            text-rendering:auto;
+           // -webkit-font-smothing: antialiased;
+            font-family:"font Awesome 5 free";
+            font-weight:900;
+            content:"\f060";
+            left:1rem;
+        }
+            &:hover{
+                @include mixins.transform-zoom;
+            }
     }
+
     .banner img{
     display:block;
     width:100%;
@@ -81,42 +87,59 @@ body{
 }
 
 .resto-main{
-    padding: 0 .5rem;
-    background-color:colors.$lightergrey;
-   
+    padding: 0;
+    background-color:colors.$lightergrey;  
 }
-h3{
+
+ h3{
     text-transform: uppercase;
     font-weight:400;
     position:relative;
+    //padding:1rem;
+    margin-left: 2rem;
     &::after{
         content:"";
         position:absolute;
-        top:1.8rem;
+        top:1.5rem;
         left:0;
         height:0.25rem;
         width:3rem;
         background-color:colors.$tertiary
-
-
     }
 }
 
-    .menus-choice{
+    .menus__choice{
         display:grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3,  1fr);
         gap: 1rem;
+
         @media (max-width:variables.$breakpoint){
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(1, 3fr);
         }
-         .menu__category{
+            .menu__category{
             background-color: white;
             border-radius: 1rem;
             filter:drop-shadow(4px 4px 4px colors.$lightygrey);
             overflow:hidden;
-            margin:0.5rem;
+            margin:1.5rem;
+            @for $i from 1 through 3{
+                &:nth-chidl(#{$i}){
+                    animation-delay:300ms * $i;
+            }
+    
+            animation: appear 3s;
+
+            .entries-items{
+                display:flex;
+                overflow: hidden;
+                animation:appear 1s;
+                animation-fill-mode: both;  
+            }
             
-           
+            .entries-items__description{
+                padding:1rem;
+                overflow: hidden; 
+            }  
             h4, p{
                 padding:0;
                 margin:0;
@@ -125,10 +148,6 @@ h3{
                 text-overflow: ellipsis;
             }
 
-            .entries-items{
-                display:flex;
-                overflow: hidden;
-                
             .entries-items__price{
                 margin-left:auto;
                 font-weight:bold;
@@ -136,12 +155,6 @@ h3{
                 display:flex; 
                 align-items: flex-end;    
             }
-
-            .entries-items__description{
-                padding:1rem;
-                overflow: hidden;
-              
-            }  
                 .entries-items__check{
                     display:grid;
                     place-items: center;
@@ -176,6 +189,7 @@ h3{
             }
         }
     }
+   
 
     section.order{
         height:40vh;
