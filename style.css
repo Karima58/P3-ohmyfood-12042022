@@ -94,6 +94,28 @@ header {
   opacity: 0.9;
 }
 
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: #fafafa;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: disappear 200ms forwards;
+  animation-delay: 3s;
+  transform-origin: top;
+}
+
+@keyframes disappear {
+  /* 0%{
+       transform:scale(1);
+   }*/
+  to {
+    transform: scale(0);
+  }
+}
 .tuto {
   background-color: white;
   counter-reset: steps;
@@ -273,10 +295,12 @@ footer p {
 
 @keyframes appear {
   0% {
-    transform: scale(0);
+    transform: translateY(50%);
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    transform: translate(0);
+    opacity: 1;
   }
 }
 @keyframes quarterspin {
@@ -396,13 +420,13 @@ body {
     grid-template-columns: repeat(1, 3fr);
   }
 }
-#page-restaurant .menus__choice #title-menu h3 {
+#page-restaurant #title-menu h3 {
   text-transform: uppercase;
   font-weight: 400;
   position: relative;
   margin-left: 2rem;
 }
-#page-restaurant .menus__choice #title-menu h3::after {
+#page-restaurant #title-menu h3::after {
   content: "";
   position: absolute;
   top: 1.5rem;
@@ -411,7 +435,7 @@ body {
   width: 3rem;
   background-color: #99E2D0;
 }
-#page-restaurant .menus__choice .menu__category {
+#page-restaurant #title-menu .menu__category {
   background-color: white;
   border-radius: 1rem;
   filter: drop-shadow(4px 4px 4px #7c7c7c);
@@ -419,40 +443,40 @@ body {
   margin: 1.5rem;
   animation: appear 3s;
 }
-#page-restaurant .menus__choice .menu__category .menu-items {
+#page-restaurant #title-menu .menu__category .menu-items {
   display: flex;
   overflow: hidden;
   animation-fill-mode: both;
   animation: appear 1s;
 }
-#page-restaurant .menus__choice .menu__category .menu-items:nth-chidl(1) {
+#page-restaurant #title-menu .menu__category .menu-items:nth-chidl(1) {
   animation-delay: 100ms;
 }
-#page-restaurant .menus__choice .menu__category .menu-items:nth-chidl(2) {
+#page-restaurant #title-menu .menu__category .menu-items:nth-chidl(2) {
   animation-delay: 200ms;
 }
-#page-restaurant .menus__choice .menu__category .menu-items:nth-chidl(3) {
+#page-restaurant #title-menu .menu__category .menu-items:nth-chidl(3) {
   animation-delay: 300ms;
 }
-#page-restaurant .menus__choice .menu__category .menu-items__description {
+#page-restaurant #title-menu .menu__category .menu-items__description {
   padding: 1rem;
   overflow: hidden;
 }
-#page-restaurant .menus__choice .menu__category .menu-items__description h4, #page-restaurant .menus__choice .menu__category .menu-items__description p {
+#page-restaurant #title-menu .menu__category .menu-items__description h4, #page-restaurant #title-menu .menu__category .menu-items__description p {
   padding: 0;
   margin: 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-#page-restaurant .menus__choice .menu__category .menu-items__price {
+#page-restaurant #title-menu .menu__category .menu-items__price {
   margin-left: auto;
   font-weight: bold;
   padding: 1rem;
   display: flex;
   align-items: flex-end;
 }
-#page-restaurant .menus__choice .menu__category .menu-items__check {
+#page-restaurant #title-menu .menu__category .menu-items__check {
   display: grid;
   place-items: center;
   flex-shrink: 0;
@@ -462,7 +486,7 @@ body {
   width: 4rem;
   transition: margin-right 1s;
 }
-#page-restaurant .menus__choice .menu__category .menu-items__check i {
+#page-restaurant #title-menu .menu__category .menu-items__check i {
   display: grid;
   place-items: center;
   background: white;
@@ -471,13 +495,13 @@ body {
   border-radius: 1rem;
   color: #99E2D0;
 }
-#page-restaurant .menus__choice .menu__category:hover {
+#page-restaurant #title-menu .menu__category:hover {
   cursor: pointer;
 }
-#page-restaurant .menus__choice .menu__category:hover .menu-items__check {
+#page-restaurant #title-menu .menu__category:hover .menu-items__check {
   margin-right: 0;
 }
-#page-restaurant .menus__choice .menu__category:hover i {
+#page-restaurant #title-menu .menu__category:hover i {
   animation: quarterspin 750ms 1 linear;
 }
 @keyframes quarterspin {

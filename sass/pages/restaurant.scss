@@ -92,15 +92,17 @@ body{
 
 
 .menus__choice{
-  
     display:grid;
+   
     grid-template-columns: repeat(3,  1fr);
     gap: 1rem;
     @media (max-width:variables.$breakpoint){
         grid-template-columns: repeat(1, 3fr);
     }
+}
 
- #title-menu 
+ #title-menu {
+     
   h3{
     text-transform: uppercase;
     font-weight:400;
@@ -117,9 +119,6 @@ body{
         background-color:colors.$tertiary
     }
 }
-
-   
-
             .menu__category{
             background-color: white;
             border-radius: 1rem;
@@ -138,13 +137,11 @@ body{
                 animation-fill-mode: both;
                 animation:appear 1s;
             }
-            
-            
-        
+
             .menu-items__description{
                 padding:1rem;
                 overflow: hidden; 
-             
+                
                 h4, p{
                     padding:0;
                     margin:0;
@@ -153,7 +150,6 @@ body{
                     text-overflow: ellipsis;
                 }
             }
-        
 
             .menu-items__price{
                 margin-left:auto;
