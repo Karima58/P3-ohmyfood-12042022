@@ -1,7 +1,8 @@
-@use "../utils/mixins";
+@use "../utils/mixins.scss";
+@use "../utils/gradient.scss";
 
 .explorer{
-    background-color: #fafafa;
+    background-color: #f6f6f6;
     text-align: center;
     height:18rem;
     //padding-top:3rem;
