@@ -6,7 +6,7 @@
 
 
 .tuto {
-   
+    background-color:white;
     counter-reset:steps;
     margin-bottom: 2rem;
     padding:1rem;
@@ -21,6 +21,7 @@
     }
      li {
          position:relative;
+         right:1.5rem;
          &::before{
              content: counter(steps);
              counter-increment: steps;

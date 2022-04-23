@@ -11,20 +11,18 @@ body {
 }
 
 main {
-  background: white;
   padding: 0;
-  margin: 1rem;
 }
 @media screen and (min-width: 1200px) {
   main {
-    padding: 0 1rem;
+    padding: 0 7rem;
     margin: 2rem 2rem;
   }
 }
 
 h2 {
   padding: 2rem 0;
-  margin: 0 2rem;
+  margin: 0;
 }
 
 h3, p {
@@ -72,7 +70,7 @@ header {
 .explorer {
   background-color: #f6f6f6;
   text-align: center;
-  height: 18rem;
+  height: 20rem;
 }
 .explorer h2 {
   margin-top: 2rem;
@@ -97,6 +95,7 @@ header {
 }
 
 .tuto {
+  background-color: white;
   counter-reset: steps;
   margin-bottom: 2rem;
   padding: 1rem;
@@ -114,6 +113,7 @@ ol {
 
 li {
   position: relative;
+  right: 1.5rem;
   list-style-type: none;
   background-color: #fafafa;
   padding: 1.5rem 2rem;
@@ -147,7 +147,7 @@ li i.fas {
 
 #homepage .menus {
   margin-bottom: 2rem;
-  margin: 1rem;
+  margin: 3rem;
 }
 #homepage .menus h2 {
   margin-bottom: 2rem;
@@ -157,7 +157,7 @@ li i.fas {
 }
 #homepage .menus .menus__cards {
   display: grid;
-  background-color: white;
+  background-color: #f6f6f6;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
@@ -201,7 +201,7 @@ li i.fas {
 }
 #homepage .menus .card .card__description {
   position: relative;
-  background-color: #fafafa;
+  background-color: white;
   border-radius: 0 0 1rem 1rem;
 }
 #homepage .menus .card .card__description::before {
@@ -318,7 +318,7 @@ body {
 #page-restaurant .banner img {
   display: block;
   width: 100%;
-  height: 60vh;
+  height: 40vh;
   object-fit: cover;
   object-position: top;
 }
