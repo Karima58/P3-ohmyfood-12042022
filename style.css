@@ -103,9 +103,22 @@ header {
   inset: 0;
   z-index: 1;
   opacity: 0.9;
-  animation: disappear 200ms forwards;
-  animation-delay: 3s;
+  animation: disappear 100ms 3s forwards;
   transform-origin: top;
+  /*i{
+      animation: spin $animation-duration infinite linear;
+  }*/
+}
+.loader::after {
+  content: "";
+  height: 200px;
+  width: 200px;
+  border: 5px solid white;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #9356dc;
+  border-radius: 50%;
+  animation: spin 1s infinite ease-in-out;
+  animation-iteration-count: 3;
 }
 
 @keyframes disappear {
@@ -114,6 +127,11 @@ header {
    }*/
   to {
     transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 .tuto {
