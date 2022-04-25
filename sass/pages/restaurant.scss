@@ -101,7 +101,7 @@ body{
     }
 }
 
- #title-menu {
+ #title-menu-entries, #title-menu-dishes, #title-menu-desserts {
      
   h3{
     text-transform: uppercase;
@@ -194,7 +194,7 @@ body{
     }
    
 
-    section.order{
+    .order{
         padding-bottom: 4rem;
         display:grid;
         place-items: center;

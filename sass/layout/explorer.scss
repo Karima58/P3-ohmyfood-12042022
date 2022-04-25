@@ -7,13 +7,14 @@
     background-color: #f6f6f6;
     text-align: center;
     height:20rem;
-    //padding-top:3rem;
+   
 
     & h2{
-    margin-top:2rem;  
+    margin-top:2rem;
     }
     & p{
-    font-size:1rem;
+    font-size:1.3rem;
+    color:grey;
     }
     & button{
     @include mixins.base-button;
