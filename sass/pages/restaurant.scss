@@ -11,7 +11,7 @@
     }
 
     50%{
-        transform:rotata(-180deg);
+        transform:rotate(-180deg);
         opacity:1;
     }
     100%{
@@ -35,8 +35,7 @@ body{
             font-size:25px;
             font-style:normal;
             font-variant:normal;
-            text-rendering:auto;
-           // -webkit-font-smothing: antialiased;
+            //text-rendering:auto;
             font-family:"font Awesome 5 free";
             font-weight:900;
             content:"\f060";
@@ -50,9 +49,9 @@ body{
     .banner img{
     display:block;
     width:100%;
-    height:40vh;
+    height:50vh;
     object-fit:cover;
-    object-position: top;
+    object-position:center;
 }
 
 .resto__title{
@@ -93,7 +92,6 @@ body{
 
 .menus__choice{
     display:grid;
-   
     grid-template-columns: repeat(3,  1fr);
     gap: 1rem;
     @media (max-width:variables.$breakpoint){
@@ -101,13 +99,11 @@ body{
     }
 }
 
- #title-menu-entries, #title-menu-dishes, #title-menu-desserts {
      
   h3{
     text-transform: uppercase;
     font-weight:400;
     position:relative;
-    //padding:1rem;
     margin-left: 2rem;
     &::after{
         content:"";
@@ -117,8 +113,8 @@ body{
         height:0.25rem;
         width:3rem;
         background-color:colors.$tertiary
+        }
     }
-}
             .menu__category{
             background-color: white;
             border-radius: 1rem;
@@ -128,16 +124,15 @@ body{
             animation: appear 3s;
              .menu-items{
                 @for $i from 1 through 3{
-                    &:nth-chidl(#{$i}){
+                    &:nth-child(#{$i}){
                      animation-delay:100ms * $i;
+                    }
                 }
-            }
                 display:flex;
                 overflow: hidden;
                 animation-fill-mode: both;
                 animation:appear 1s;
-            }
-
+            
             .menu-items__description{
                 padding:1rem;
                 overflow: hidden; 
@@ -150,7 +145,7 @@ body{
                     text-overflow: ellipsis;
                 }
             }
-
+        
             .menu-items__price{
                 margin-left:auto;
                 font-weight:bold;
@@ -185,15 +180,13 @@ body{
                 }
                 i{
                     @include animations.quartespin;
-                    animation:quarterspin 750ms 1 linear ;
-                   
+                    animation:quarterspin 750ms 1 linear ; 
                 }
                 }
             }
-        }     
-    }
-   
-
+        }
+}     
+    
     .order{
         padding-bottom: 4rem;
         display:grid;
@@ -206,6 +199,7 @@ body{
             opacity: 0.9;
             }
     }
+
     
 
 

@@ -15,7 +15,7 @@
      ol{
         display:flex;
          gap:2rem;
-         @media (max-width:768px) {
+         @media (max-width:1200px) {
             flex-direction:column;
         }
     }
@@ -27,7 +27,7 @@
              content: counter(steps);
              counter-increment: steps;
              color:white;
-             background-color:colors.$purple;
+             background-color:lighten(colors.$primary, 10%);
              width:2 * variables.$tuto-bullet-height;
              height:2 * variables.$tuto-bullet-height;
              display:grid;
@@ -46,6 +46,10 @@
         @include mixins.box-shadow;
         &:hover{
             @include mixins.transform-zoom;
+            background-color:lighten(colors.$secondary, 20%);
+            i::before{
+                color:colors.$primary;
+            }
         }
         & i.fas{
             margin-right:1rem;
