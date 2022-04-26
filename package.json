@@ -4,7 +4,8 @@
   "description": "Mon projet 3 Openclassrooms Oh My Food",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch  style.scss style.css"
+    "sass": "sass --watch  style.scss style.css",
+    "build": "postcss style.css -o ./build/style.min.css"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,9 @@
   },
   "homepage": "https://github.com/Karima58/ohmyfood-P308032022#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.5",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
     "sass": "^1.50.0"
   }
 }

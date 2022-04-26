@@ -3,12 +3,6 @@
 
 
 
-/*@mixin mobile-only{
-    @media screen and (max-width:map-get($breakpoints, mobile)){
-       @content;
-    }
-}*/
-
 @mixin gradient($opacity){
     background-image: linear-gradient(0deg,
     rgba(147,86,
