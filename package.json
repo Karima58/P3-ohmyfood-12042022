@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch  style.scss style.css",
-    "build": "postcss style.css -o ./build/style.min.css"
+    "build": "postcss style.css -u autoprefixer -o ./build/style.min.css"
   },
   "repository": {
     "type": "git",
