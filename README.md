@@ -1,6 +1,6 @@
 # P3-ohmyfood-12042022
 
-This is the project of OpenClassrooms
+This is the  third project of OpenClassrooms
 
 https://openclassrooms.com/fr/paths/185/projects/637/assignment
 
