@@ -132,21 +132,19 @@ body{
                 animation-fill-mode: both;
                 animation:appear 1s;
             
-            
             .menu-items__description{
                 padding:1rem;
-                //overflow: hidden; 
+                overflow: hidden;
                
                 h4, p{
-                   // padding:0;
-                   // margin:0;
-                    overflow: hidden;
+                    padding:0;
+                    margin:0;
                     white-space:nowrap;
-                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    text-overflow:ellipsis;
                 }
             }
-          
-         
+
             .menu-items__price{
                 margin-left:auto;
                 font-weight:bold;
@@ -186,7 +184,7 @@ body{
                 }
             }
         }
-}
+    }
 }     
     
     .order{

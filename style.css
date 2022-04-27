@@ -478,10 +478,13 @@ body {
 }
 #page-restaurant .menus__choice .menu__category .menu-items .menu-items__description {
   padding: 1rem;
+  overflow: hidden;
 }
 #page-restaurant .menus__choice .menu__category .menu-items .menu-items__description h4, #page-restaurant .menus__choice .menu__category .menu-items .menu-items__description p {
-  overflow: hidden;
+  padding: 0;
+  margin: 0;
   white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 #page-restaurant .menus__choice .menu__category .menu-items .menu-items__price {
