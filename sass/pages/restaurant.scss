@@ -10,6 +10,7 @@
         opacity:1;
     }
 
+
     50%{
         transform:rotate(-180deg);
         opacity:1;
@@ -86,40 +87,41 @@ body{
     .resto-main{
         padding: 0;
         background-color:colors.$lightergrey;  
+
+        #title-menu-1, #title-menu-2, #title-menu-3{
+            //overflow:hidden;
+            h3{
+                
+                text-transform: uppercase;
+                font-weight:400;
+                position:relative;
+                margin-left: 2rem;
+                &::after{
+                background-color:colors.$tertiary;
+                content:"";
+                position:absolute;
+                bottom:-0.5rem;
+                left:0;
+                height:0.25rem;
+                width:3rem;
+                
+                }
+            }
+        }
    
         .menus__choice{
-        
         display:grid;
         grid-template-columns: repeat(1,  3fr);
-        gap: 1rem;
+        gap: 0.5rem;
         @media (max-width:variables.$breakpoint){
             grid-template-columns: repeat(3, 1fr);     
             }
-            @media (min-width:variables.$breakpoint){
+            @media (min-width:variables.$breakpoints){
                 display:flex;
                 flex-direction: column;
             }
 
-        #title-menu{
-            overflow:hidden;
-           
-
-                h3{
-                    overflow:hidden;
-                    text-transform: uppercase;
-                    font-weight:400;
-                    position:relative;
-                    margin-left: 2rem;
-                    &::after{
-                    content:"";
-                    position:absolute;
-                    top:1.5rem;
-                    left:0;
-                    height:0.25rem;
-                    width:3rem;
-                    background-color:colors.$tertiary
-                    }
-                }
+        
                 .menu__category{
                    
                     background-color: white;
@@ -192,7 +194,6 @@ body{
                     }//fermeture menu-check
                     }//fermeture menu-items
                 } //fermeture menu__category
-            }//fermeture title-menu
         }//fermeture menu__choice
     }//fermeture resto-main
 
@@ -200,7 +201,7 @@ body{
             padding-bottom: 4rem;
             display:grid;
             place-items: center;
-            button{
+             button{
                 @include mixins.base-button;
                 }
             button:hover{
@@ -208,8 +209,9 @@ body{
                 opacity: 0.9;
             }
         }
-    
-}//fermeturepage-retaurant
+
+
+}//fermeture page-retaurant
 
 
 

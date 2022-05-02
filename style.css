@@ -428,42 +428,38 @@ body {
   padding: 0;
   background-color: #F6F6F6;
 }
+#page-restaurant .resto-main #title-menu-1 h3, #page-restaurant .resto-main #title-menu-2 h3, #page-restaurant .resto-main #title-menu-3 h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+  margin-left: 2rem;
+}
+#page-restaurant .resto-main #title-menu-1 h3::after, #page-restaurant .resto-main #title-menu-2 h3::after, #page-restaurant .resto-main #title-menu-3 h3::after {
+  background-color: #99E2D0;
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  height: 0.25rem;
+  width: 3rem;
+}
 #page-restaurant .resto-main .menus__choice {
   display: grid;
   grid-template-columns: repeat(1, 3fr);
-  gap: 1rem;
+  gap: 0.5rem;
 }
 @media (max-width: 1200px) {
   #page-restaurant .resto-main .menus__choice {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 375px) {
   #page-restaurant .resto-main .menus__choice {
     display: flex;
     flex-direction: column;
   }
 }
-#page-restaurant .resto-main .menus__choice #title-menu {
-  overflow: hidden;
-}
-#page-restaurant .resto-main .menus__choice #title-menu h3 {
-  overflow: hidden;
-  text-transform: uppercase;
-  font-weight: 400;
-  position: relative;
-  margin-left: 2rem;
-}
-#page-restaurant .resto-main .menus__choice #title-menu h3::after {
-  content: "";
-  position: absolute;
-  top: 1.5rem;
-  left: 0;
-  height: 0.25rem;
-  width: 3rem;
-  background-color: #99E2D0;
-}
-#page-restaurant .resto-main .menus__choice #title-menu .menu__category {
+#page-restaurant .resto-main .menus__choice .menu__category {
   background-color: white;
   border-radius: 1rem;
   filter: drop-shadow(4px 4px 4px #7c7c7c);
@@ -471,7 +467,7 @@ body {
   margin: 1.5rem;
   animation: appear 3s;
 }
-#page-restaurant .resto-main .menus__choice #title-menu .menu__category .menu-items {
+#page-restaurant .resto-main .menus__choice .menu__category .menu-items {
   display: flex;
   overflow: hidden;
   animation-fill-mode: both;
@@ -485,34 +481,34 @@ body {
   animation-fill-mode: both;
   animation: appear 1s;
 }
-#page-restaurant .resto-main .menus__choice #title-menu .menu__category .menu-items:nth-child(1) {
+#page-restaurant .resto-main .menus__choice .menu__category .menu-items:nth-child(1) {
   animation-delay: 100ms;
 }
-#page-restaurant .resto-main .menus__choice #title-menu .menu__category .menu-items:nth-child(2) {
+#page-restaurant .resto-main .menus__choice .menu__category .menu-items:nth-child(2) {
   animation-delay: 200ms;
 }
-#page-restaurant .resto-main .menus__choice #title-menu .menu__category .menu-items:nth-child(3) {
+#page-restaurant .resto-main .menus__choice .menu__category .menu-items:nth-child(3) {
   animation-delay: 300ms;
 }
-#page-restaurant .resto-main .menus__choice #title-menu .menu__category .menu-items .menu-items__description {
+#page-restaurant .resto-main .menus__choice .menu__category .menu-items .menu-items__description {
   padding: 1rem;
   overflow: hidden;
 }
-#page-restaurant .resto-main .menus__choice #title-menu .menu__category .menu-items .menu-items__description h4, #page-restaurant .resto-main .menus__choice #title-menu .menu__category .menu-items .menu-items__description p {
+#page-restaurant .resto-main .menus__choice .menu__category .menu-items .menu-items__description h4, #page-restaurant .resto-main .menus__choice .menu__category .menu-items .menu-items__description p {
   padding: 0;
   margin: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-#page-restaurant .resto-main .menus__choice #title-menu .menu__category .menu-items .menu-items__price {
+#page-restaurant .resto-main .menus__choice .menu__category .menu-items .menu-items__price {
   margin-left: auto;
   font-weight: bold;
   padding: 1rem;
   display: flex;
   align-items: flex-end;
 }
-#page-restaurant .resto-main .menus__choice #title-menu .menu__category .menu-items .menu-items__check {
+#page-restaurant .resto-main .menus__choice .menu__category .menu-items .menu-items__check {
   display: grid;
   place-items: center;
   flex-shrink: 0;
@@ -522,7 +518,7 @@ body {
   width: 4rem;
   transition: margin-right 1s;
 }
-#page-restaurant .resto-main .menus__choice #title-menu .menu__category .menu-items .menu-items__check i {
+#page-restaurant .resto-main .menus__choice .menu__category .menu-items .menu-items__check i {
   display: grid;
   place-items: center;
   background: white;
@@ -531,13 +527,13 @@ body {
   border-radius: 1rem;
   color: #99E2D0;
 }
-#page-restaurant .resto-main .menus__choice #title-menu .menu__category .menu-items .menu-items__check:hover {
+#page-restaurant .resto-main .menus__choice .menu__category .menu-items .menu-items__check:hover {
   cursor: pointer;
 }
-#page-restaurant .resto-main .menus__choice #title-menu .menu__category .menu-items .menu-items__check:hover .menu-items__check {
+#page-restaurant .resto-main .menus__choice .menu__category .menu-items .menu-items__check:hover .menu-items__check {
   margin-right: 0rem;
 }
-#page-restaurant .resto-main .menus__choice #title-menu .menu__category .menu-items .menu-items__check:hover i {
+#page-restaurant .resto-main .menus__choice .menu__category .menu-items .menu-items__check:hover i {
   animation: quarterspin 750ms 1 linear;
 }
 @keyframes quarterspin {

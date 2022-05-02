@@ -13,6 +13,7 @@
   },
   "author": "Karima BEN TOUNES",
   "license": "ISC",
+  "browserslist":"last 4 versions",
   "bugs": {
     "url": "https://github.com/Karima58/ohmyfood-P308032022/issues"
   },
