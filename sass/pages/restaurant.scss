@@ -116,14 +116,13 @@ body{
         @media (max-width:variables.$breakpoint){
             grid-template-columns: repeat(3, 1fr);     
             }
-            @media (min-width:variables.$breakpoints){
+        @media (min-width:variables.$breakpoints){
                 display:flex;
                 flex-direction: column;
             }
 
         
                 .menu__category{
-                   
                     background-color: white;
                     border-radius: 1rem;
                     filter:drop-shadow(4px 4px 4px colors.$lightygrey);
@@ -142,9 +141,9 @@ body{
                         animation:appear 1s;
                         }
 
-                        .menu-items__description{
-                            padding:1rem;
-                            overflow: hidden;
+                    .menu-items__description{
+                        padding:1rem;
+                        overflow: hidden;
                         h4, p{
                             padding:0;
                             margin:0;
@@ -160,38 +159,38 @@ body{
                             display:flex; 
                             align-items: flex-end;    
                         }
-                    .menu-items__check{
-                        display:grid;
-                        place-items: center;
-                        flex-shrink:0;
-                        $button-width:4rem; //variable locale.
-                        border-radius:0 1rem 1rem 0;
-                        background-color:colors.$tertiary;
-                        margin-right: -1 * $button-width;
-                        width: $button-width;
-                        transition: margin-right 1s;    
-                        i{
+                        .menu-items__check{
                             display:grid;
-                            place-items:center;
-                            background:white;
-                            aspect-ratio:1/1;
-                            width:2rem;
-                            border-radius:1rem;
-                            color:colors.$tertiary;
-                        }
-                        
-                        &:hover {
-                            cursor:pointer;
-                            .menu-items__check{
-                            margin-right: 0rem;
-                
+                            place-items: center;
+                            flex-shrink:0;
+                            $button-width:4rem; //variable locale.
+                            border-radius:0 1rem 1rem 0;
+                            background-color:colors.$tertiary;
+                            margin-right: -1 * $button-width;
+                            width: $button-width;
+                            transition: margin-right 1s;    
+                            i{
+                                display:grid;
+                                place-items:center;
+                                background:white;
+                                aspect-ratio:1/1;
+                                width:2rem;
+                                border-radius:1rem;
+                                color:colors.$tertiary;
                             }
-                        i{
-                            @include animations.quartespin;
-                            animation:quarterspin 750ms 1 linear ; 
-                        }
-                        }
-                    }//fermeture menu-check
+                        
+                            &:hover {
+                                cursor:pointer;
+                                .menu-items__check{
+                                margin-right: 0rem;
+                    
+                                }
+                                i{
+                                    @include animations.quartespin;
+                                    animation:quarterspin 750ms 1 linear ; 
+                                }
+                            }
+                        }//fermeture menu-items__check
                     }//fermeture menu-items
                 } //fermeture menu__category
         }//fermeture menu__choice
