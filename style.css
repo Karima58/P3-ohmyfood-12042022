@@ -26,8 +26,12 @@ h2 {
   margin: 0;
 }
 
-h3, p {
+p {
   margin: 0;
+}
+
+h3 {
+  margin-left: 2rem;
 }
 
 a {

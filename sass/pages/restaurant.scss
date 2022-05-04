@@ -100,22 +100,22 @@ body{
 
      
 #title-menu{
-     h3{
-    text-transform: uppercase;
-    font-weight:400;
-    position:relative;
-    margin-left: 2rem;
-    &::after{
-        content:"";
-        position:absolute;
-        top:1.5rem;
-        left:0;
-        height:0.25rem;
-        width:3rem;
-        background-color:colors.$tertiary
+        h3{
+        text-transform: uppercase;
+        font-weight:400;
+        position:relative;
+        margin-left: 2rem;
+            &::after{
+                content:"";
+                position:absolute;
+                top:1.5rem;
+                left:0;
+                height:0.25rem;
+                width:3rem;
+                background-color:#99E2D0;
+            }
         }
     }
-}
             .menu__category{
             background-color: white;
             border-radius: 1rem;
