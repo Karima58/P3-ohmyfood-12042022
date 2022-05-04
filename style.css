@@ -513,10 +513,10 @@ body {
   display: grid;
   place-items: center;
   flex-shrink: 0;
+  width: 4rem;
   border-radius: 0 1rem 1rem 0;
   background-color: #99E2D0;
   margin-right: -4rem;
-  width: 4rem;
   transition: margin-right 1s;
 }
 #page-restaurant .resto-main .menus__choice .menu__category .menu-items .menu-items__check i {

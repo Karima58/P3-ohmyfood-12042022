@@ -88,7 +88,7 @@ body{
         padding: 0;
         background-color:colors.$lightergrey;  
 
-        #title-menu-1, #title-menu-2, #title-menu-3{
+        #title-menu-1,#title-menu-2,#title-menu-3{
             //overflow:hidden;
             h3{
                 
@@ -164,10 +164,10 @@ body{
                             place-items: center;
                             flex-shrink:0;
                             $button-width:4rem; //variable locale.
+                            width: $button-width;
                             border-radius:0 1rem 1rem 0;
                             background-color:colors.$tertiary;
                             margin-right: -1 * $button-width;
-                            width: $button-width;
                             transition: margin-right 1s;    
                             i{
                                 display:grid;
@@ -182,7 +182,7 @@ body{
                             &:hover {
                                 cursor:pointer;
                                 .menu-items__check{
-                                margin-right: 0rem;
+                                    margin-right: 0rem;
                     
                                 }
                                 i{
