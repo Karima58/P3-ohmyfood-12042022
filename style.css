@@ -249,6 +249,7 @@ li i.fas {
   position: relative;
   background-color: white;
   border-radius: 0 0 1rem 1rem;
+  top: -1rem;
 }
 #homepage .menus .card .card__description::before {
   display: inline-block;
