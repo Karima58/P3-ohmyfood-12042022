@@ -234,16 +234,16 @@ li i.fas {
   background-position: center;
 }
 #homepage .menus .card__image-1 {
-  background-image: url("./assets/menu-1.jpg");
+  background-image: url("../../assets/menu-1.jpg");
 }
 #homepage .menus .card__image-2 {
-  background-image: url("./assets/menu-2.jpg");
+  background-image: url("../../assets/menu-2.jpg");
 }
 #homepage .menus .card__image-3 {
-  background-image: url("./assets/menu-3.jpg");
+  background-image: url("../../assets/menu-3.jpg");
 }
 #homepage .menus .card__image-4 {
-  background-image: url("./assets/menu-4.jpg");
+  background-image: url("../../assets/menu-4.jpg");
 }
 #homepage .menus .card .card__description {
   position: relative;
@@ -302,6 +302,7 @@ li i.fas {
 }
 #homepage .menus .card .card__description h3, #homepage .menus .card .card__description p {
   padding: 0.3rem;
+  margin: 0;
 }
 
 footer {
@@ -534,11 +535,11 @@ body {
     opacity: 1;
   }
   50% {
-    transform: rotate(-180deg);
+    transform: rotate(180deg);
     opacity: 1;
   }
   100% {
-    transform: rotate(-360deg);
+    transform: rotate(360deg);
     opacity: 1;
   }
 }
